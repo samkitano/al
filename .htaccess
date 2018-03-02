@@ -1,0 +1,6 @@
+<ifModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !\.(js|css|gif|jpg|jpeg|png|ico|swf|pdf|ogg|wav|mp3|mp4|webm|html|php|json)$
+   RewriteCond %{REQUEST_URI} !^index
+   RewriteRule (.*) index.html [L]
+</ifModule>

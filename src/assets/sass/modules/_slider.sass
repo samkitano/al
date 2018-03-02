@@ -1,0 +1,89 @@
+.Selector
+  display: inline-block
+  width: calc(100% - 2px)
+  border: 1px solid $main-color
+  border-radius: 0 0 .5em .5em
+  &_previous,
+  &_first,
+  &_last,
+  &_count,
+  &_next
+    float: left
+    vertical-align: middle
+    line-height: 1
+    padding: 0.5em .5em 0.3em
+  &_previous,
+  &_first
+    border-right: 1px solid $main-color
+  &_last,
+  &_next
+    border-left: 1px solid $main-color
+    float: right
+  &_previous,
+  &_first,
+  &_last,
+  &_next
+    cursor: pointer
+  &_count
+    min-width: 7em
+    float: none
+    display: inline-block
+  h3
+    font-size: 1.5em
+    margin: 0
+  .disabled
+    cursor: not-allowed
+    svg
+      fill: $disabled-color
+
+.Slider
+  height: 30em
+  background: $main-color
+  position: relative
+  border: .75em solid $main-color
+  border-radius: .5em .5em 0 0
+  overflow: hidden
+  &__caption
+    &_close, &_open
+      transition: max-height .5s ease-in-out
+      -webkit-transition: max-height .5s ease-in-out
+    &_close
+      max-height: .5em
+      overflow: hidden
+    &_open
+      max-height: 100em
+    &__text
+      text-align: left
+      background: $quotes-bg
+
+.Slide
+  width: 100%
+  height: 100%
+  background-size: contain
+  background-repeat: no-repeat
+  background-position-x: 50%
+  background-position-y: 50%
+  -webkit-transition: opacity 1.1s ease, -webkit-transform 1s ease-out
+  transition: opacity 1.1s ease, -webkit-transform 1s ease-out
+  transition: opacity 1.1s ease, transform 1s ease-out
+  transition: opacity 1.1s ease, transform 1s ease-out, -webkit-transform 1s ease-out
+  position: absolute
+  &_current 
+    -webkit-transition: -webkit-transform 1s ease-out
+    transition: -webkit-transform 1s ease-out
+    transition: transform 1s ease-out
+    transition: transform 1s ease-out, -webkit-transform 1s ease-out
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    z-index: 1
+    opacity: 1
+  &_prev
+    -webkit-transform: translateX(-100%)
+    transform: translateX(-100%)
+    opacity: 0
+  &_next
+    -webkit-transform: translateX(100%)
+    transform: translateX(100%)
+    opacity: 0
+  &_transition
+    opacity: 0

@@ -1,0 +1,34 @@
+.back2top-fade-enter-active,
+.back2top-fade-leave-active
+  transition: opacity .7s
+
+.back2top-fade-enter,
+.back2top-fade-leave-to
+  opacity: 0
+
+.Back2top
+  font-family: $alt-font
+  position: fixed
+  bottom: 2em
+  right: 1em
+  color: $white
+  text-align: center
+  line-height: 2em
+  background: rgba(255, 170, 85, .7)
+  border-radius: 3px
+  z-index: 1000
+  cursor: pointer
+  padding: .5em 1em
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75)
+  -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75)
+  box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75)
+  transition: all .15s ease-in-out
+  -webkit-transition: all .15s ease-in-out
+  &:hover
+    background-color: $main-color
+  span
+    color: $white
+  svg
+    fill: $white
+    margin-left: .5em
+    vertical-align: baseline

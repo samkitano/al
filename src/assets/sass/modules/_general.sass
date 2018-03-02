@@ -1,0 +1,92 @@
+html
+  background: #fff
+body
+  font-size: 18px
+  font-family: $text-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  max-width: $app-max-width
+  min-width: $app-min-width
+  margin: 0 auto
+  padding: 0
+  height: 100%
+  position: relative
+  color: $text-color
+
+::-moz-selection
+  background: $main-color
+  color: $white
+  text-shadow: none
+
+::selection
+  background: $main-color
+  color: $white
+  text-shadow: none
+
+svg
+  fill: $text-color
+  -webkit-transition: fill .2s ease
+  transition: fill .2s ease
+
+svg:hover
+  fill: $main-color
+
+figure
+  overflow: hidden
+  position: relative
+  border-radius: 0.5em
+  height: 100%
+  max-width: $app-max-width
+  display: block
+  border: 0.75em solid $main-color
+  margin: 2em auto 2em auto
+
+figure:hover figcaption
+  bottom: 1em
+
+figcaption
+  text-align: left
+  font-size: 0.75em
+  position: absolute
+  bottom: -25%
+  left: 1em
+  margin-right: 1em
+  padding: .5em 1em
+  border-radius: .25em
+  background: rgba(0,0,0,0.85)
+  color: $white
+  -webkit-transition: bottom .5s ease-in-out
+  transition: bottom .5s ease-in-out
+
+a
+  text-decoration: none
+  font-family: inherit
+  
+hr
+  border: 0
+  height: 0.75em
+  background: $main-color
+  display: block
+  clear: both
+  margin: 2em 0
+  padding: 0
+  border-radius: 0.25em
+
+section
+  padding-top: 2em
+
+a.link,
+p a
+  text-decoration: none
+  font-family: inherit
+  outline: 0
+  color: $main-color
+  border-bottom: 1px solid transparent
+  -webkit-transition: color .2s ease-out, border-bottom-color .2s ease-out
+  -moz-transition: color .2s ease-out, border-bottom-color .2s ease-out
+  -ms-transition: color .2s ease-out, border-bottom-color .2s ease-out
+  transition: color .2s ease-out, border-bottom-color .2s ease-out
+  &:hover
+    text-decoration: none
+    border-bottom: 1px solid $main-color
+    color: darken($main-color, 10%)

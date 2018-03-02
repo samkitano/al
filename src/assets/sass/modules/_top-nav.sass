@@ -1,0 +1,32 @@
+.Top
+  overflow: hidden
+  &__logo
+    text-align: center
+    width: 3em
+    padding: 0.5em
+    display: inline-block
+    border-radius: 0.25em
+    margin-right: 1em
+    border: 0.45em solid $main-color
+  &__current
+    display: inline-flex
+    align-items: center
+    h4
+      margin: 0 0 0 .5em
+      color: $text-color
+      -webkit-transition:color .2s ease-in-out
+      transition:color .2s ease-in-out
+    &:hover
+      h4
+        color: $main-color
+      svg
+        fill: $main-color
+  &__burger
+    background: 0
+    float: right
+    cursor: pointer
+    border: 0.45em solid transparent
+    color: $text-color
+    padding: .5em 0
+    &:hover
+      background: #fff

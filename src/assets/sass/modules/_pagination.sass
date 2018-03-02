@@ -1,0 +1,52 @@
+.Paginator
+  text-align: center
+
+.Pagination
+  display: inline-block
+  padding-left: 0
+  border-radius: 4px
+  li.disabled, li.disabled a, li.disabled a svg
+    cursor: not-allowed
+  li.disabled a svg
+    fill: $disabled-color
+  >li
+    display: inline
+    >a
+      cursor: pointer
+      -webkit-transition:color .2s ease-in-out
+      transition:color .2s ease-in-out
+      &:hover
+        color: $main-color
+    &:first-child
+      >a, >span
+        margin-left: 0
+        border-top-left-radius: 4px
+        border-bottom-left-radius: 4px
+    &:last-child
+      >a, >span
+        margin-right: 0
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 4px
+  >li>a, >li>span
+    position: relative
+    float: left
+    padding: 1em 2em
+    margin-left: -1px
+    color: $text-color
+    text-decoration: none
+    background-color: $white
+    border: 1px solid $main-color
+  >.active>a,
+  >.active>a:focus,
+  >.active>a:hover,
+  >.active>span,
+  >.active>span:focus,
+  >.active>span:hover
+    z-index: 3
+    color: $white
+    cursor: default
+    background-color: $main-color
+    border-color: $main-color
+  .page-item span, .page-item svg
+    vertical-align: middle
+    line-height: 1

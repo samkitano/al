@@ -1,0 +1,45 @@
+.Book
+  display: inline-block
+  margin: 1em 0!important
+  &__cover, &__data
+    float: left
+  &__data
+    width: calc(70% - 2em)
+  &__cover
+    width: 30%
+    ul
+      padding: 0
+      margin: 0
+      li
+        margin: 1em 0
+        list-style: none
+        a
+          font-family: $alt-font
+    img
+      max-width: 90%
+      text-align: center
+    .year
+      svg
+        vertical-align: text-top
+        &:hover
+          fill: $text-color
+
+.book
+  article:not(:last-child)
+    margin-bottom: 4em
+  blockquote
+    margin: 1em 0 4em 0
+    padding-left: 8em
+    display: inline-block
+    float: right
+    p:last-child
+      text-align: right
+      font-variant: small-caps
+    p
+      text-align: justify
+      clear: both
+  h1
+    margin: 0 0 2em 0
+  h1, h2
+    text-align: center
+    clear: both
